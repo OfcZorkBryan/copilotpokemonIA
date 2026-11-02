@@ -1,0 +1,67 @@
+COMMAND: ['C:\\Users\\ofici\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe', '-m', 'unittest', 'discover', '-s', 'tests', '-v']
+EXIT CODE: 0
+[01/Nov/2026 22:12:41] 127.0.0.1 "POST /api/capture HTTP/1.1" 403 -
+[01/Nov/2026 22:12:41] 127.0.0.1 "GET /api/devices HTTP/1.1" 200 -
+[01/Nov/2026 22:12:41] 127.0.0.1 "GET /api/devices HTTP/1.1" 200 -
+[01/Nov/2026 22:12:41] 127.0.0.1 "POST /api/capture HTTP/1.1" 200 -
+[01/Nov/2026 22:12:41] 127.0.0.1 "GET /api/captures/captura-20261102T011241-920f13.png HTTP/1.1" 200 -
+[01/Nov/2026 22:12:41] 127.0.0.1 "POST /api/capture HTTP/1.1" 503 -
+[01/Nov/2026 22:12:41] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[01/Nov/2026 22:12:41] 127.0.0.1 "GET / HTTP/1.1" 200 -
+[01/Nov/2026 22:12:41] 127.0.0.1 "POST /api/import HTTP/1.1" 200 -
+[01/Nov/2026 22:12:41] 127.0.0.1 "GET /api/captures/captura-20261102T011241-bf59d8.png HTTP/1.1" 200 -
+[01/Nov/2026 22:12:41] 127.0.0.1 "GET /api/captures HTTP/1.1" 200 -
+[01/Nov/2026 22:12:41] 127.0.0.1 "POST /api/ocr HTTP/1.1" 200 -
+[01/Nov/2026 22:12:41] 127.0.0.1 "POST /api/ocr HTTP/1.1" 200 -
+[01/Nov/2026 22:12:41] 127.0.0.1 "POST /api/ocr HTTP/1.1" 503 -
+[01/Nov/2026 22:12:41] 127.0.0.1 "GET /api/captures/..%2fREADME.md HTTP/1.1" 404 -
+[01/Nov/2026 22:12:41] 127.0.0.1 "POST /api/import HTTP/1.1" 400 -
+[01/Nov/2026 22:12:41] 127.0.0.1 "POST /api/ocr HTTP/1.1" 400 -
+[01/Nov/2026 22:12:41] 127.0.0.1 "POST /api/capture HTTP/1.1" 400 -
+
+test_collection_ambiguity_not_merged (test_recognition.RecognitionTest.test_collection_ambiguity_not_merged) ... ok
+test_collection_requires_explicit_quantity (test_recognition.RecognitionTest.test_collection_requires_explicit_quantity) ... ok
+test_conflicting_duplicates_abstain (test_recognition.RecognitionTest.test_conflicting_duplicates_abstain) ... ok
+test_conflicting_mission_progress_is_omitted (test_recognition.RecognitionTest.test_conflicting_mission_progress_is_omitted) ... ok
+test_english_resource_names (test_recognition.RecognitionTest.test_english_resource_names) ... ok
+test_headers (test_recognition.RecognitionTest.test_headers) ... ok
+test_huge_number_is_omitted_without_losing_other_resources (test_recognition.RecognitionTest.test_huge_number_is_omitted_without_losing_other_resources) ... ok
+test_identical_mission_duplicate_is_one_candidate (test_recognition.RecognitionTest.test_identical_mission_duplicate_is_one_candidate) ... ok
+test_input_limit_and_type (test_recognition.RecognitionTest.test_input_limit_and_type) ... ok
+test_mission_progress_invalid_or_unknown (test_recognition.RecognitionTest.test_mission_progress_invalid_or_unknown) ... ok
+test_mission_rewards_are_never_balances (test_recognition.RecognitionTest.test_mission_rewards_are_never_balances) ... ok
+test_no_resource_inference_from_collection (test_recognition.RecognitionTest.test_no_resource_inference_from_collection) ... ok
+test_resources_explicit_labels_zero_and_thousands (test_recognition.RecognitionTest.test_resources_explicit_labels_zero_and_thousands) ... ok
+test_unclear_and_negative_numbers_not_guessed (test_recognition.RecognitionTest.test_unclear_and_negative_numbers_not_guessed) ... ok
+test_unknown_and_navigation_are_not_a_screen (test_recognition.RecognitionTest.test_unknown_and_navigation_are_not_a_screen) ... ok
+test_block_other_web_origins (test_server.ServerTest.test_block_other_web_origins) ... ok
+test_device_error_gracefully (test_server.ServerTest.test_device_error_gracefully) ... ok
+test_fake_adb_capture (test_server.ServerTest.test_fake_adb_capture) ... ok
+test_health_and_static_page (test_server.ServerTest.test_health_and_static_page) ... ok
+test_import_and_get_capture (test_server.ServerTest.test_import_and_get_capture) ... ok
+test_ocr_recognition_contract (test_server.ServerTest.test_ocr_recognition_contract) ... ok
+test_ocr_unavailable_and_failure (test_server.ServerTest.test_ocr_unavailable_and_failure) ... ok
+test_rejects_bad_input_and_traversal (test_server.ServerTest.test_rejects_bad_input_and_traversal) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.893s
+
+OK
+
+
+COMMAND: ['C:\\Users\\ofici\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe', 'tests/ui_smoke_node.js']
+EXIT CODE: 0
+JS smoke OK: dashboard, decks, inventory saved, visual reader and resources
+V3 UI OK: candidates escaped; reserve, resources, inventory and saved backup state unchanged
+
+
+
+COMMAND: ['git', 'diff', '--check']
+EXIT CODE: 0
+
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/test_server.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/ui_smoke_node.js', LF will be replaced by CRLF the next time Git touches it
+
