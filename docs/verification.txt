@@ -1,39 +1,56 @@
 COMMAND: ['C:\\Users\\ofici\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe', '-m', 'unittest', 'discover', '-s', 'tests', '-v']
 EXIT CODE: 0
-[01/Nov/2026 22:22:25] 127.0.0.1 "POST /api/import HTTP/1.1" 200 -
-[01/Nov/2026 22:22:25] 127.0.0.1 "POST /api/ocr HTTP/1.1" 200 -
-[01/Nov/2026 22:22:25] 127.0.0.1 "POST /api/import HTTP/1.1" 200 -
-[01/Nov/2026 22:22:25] 127.0.0.1 "POST /api/ocr HTTP/1.1" 200 -
-[01/Nov/2026 22:22:25] 127.0.0.1 "POST /api/import HTTP/1.1" 200 -
-[01/Nov/2026 22:22:26] 127.0.0.1 "POST /api/ocr HTTP/1.1" 200 -
-[01/Nov/2026 22:22:26] 127.0.0.1 "POST /api/import HTTP/1.1" 200 -
-[01/Nov/2026 22:22:26] 127.0.0.1 "POST /api/ocr HTTP/1.1" 200 -
-[01/Nov/2026 22:22:26] 127.0.0.1 "POST /api/import HTTP/1.1" 200 -
-[01/Nov/2026 22:22:26] 127.0.0.1 "POST /api/ocr HTTP/1.1" 200 -
-[01/Nov/2026 22:22:26] 127.0.0.1 "POST /api/capture HTTP/1.1" 403 -
-[01/Nov/2026 22:22:26] 127.0.0.1 "GET /api/devices HTTP/1.1" 200 -
-[01/Nov/2026 22:22:27] 127.0.0.1 "GET /api/devices HTTP/1.1" 200 -
-[01/Nov/2026 22:22:27] 127.0.0.1 "POST /api/capture HTTP/1.1" 200 -
-[01/Nov/2026 22:22:27] 127.0.0.1 "GET /api/captures/captura-20261102T012227-a31b8a.png HTTP/1.1" 200 -
-[01/Nov/2026 22:22:27] 127.0.0.1 "POST /api/capture HTTP/1.1" 503 -
-[01/Nov/2026 22:22:27] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
-[01/Nov/2026 22:22:27] 127.0.0.1 "GET / HTTP/1.1" 200 -
-[01/Nov/2026 22:22:27] 127.0.0.1 "POST /api/import HTTP/1.1" 200 -
-[01/Nov/2026 22:22:27] 127.0.0.1 "GET /api/captures/captura-20261102T012227-23d6db.png HTTP/1.1" 200 -
-[01/Nov/2026 22:22:27] 127.0.0.1 "GET /api/captures HTTP/1.1" 200 -
-[01/Nov/2026 22:22:27] 127.0.0.1 "POST /api/ocr HTTP/1.1" 200 -
-[01/Nov/2026 22:22:27] 127.0.0.1 "POST /api/ocr HTTP/1.1" 200 -
-[01/Nov/2026 22:22:27] 127.0.0.1 "POST /api/ocr HTTP/1.1" 503 -
-[01/Nov/2026 22:22:27] 127.0.0.1 "GET /api/captures/..%2fREADME.md HTTP/1.1" 404 -
-[01/Nov/2026 22:22:27] 127.0.0.1 "POST /api/import HTTP/1.1" 400 -
-[01/Nov/2026 22:22:27] 127.0.0.1 "POST /api/ocr HTTP/1.1" 400 -
-[01/Nov/2026 22:22:27] 127.0.0.1 "POST /api/capture HTTP/1.1" 400 -
+[01/Nov/2026 22:53:10] 127.0.0.1 "POST /api/import HTTP/1.1" 200 -
+[01/Nov/2026 22:53:11] 127.0.0.1 "POST /api/ocr HTTP/1.1" 200 -
+[01/Nov/2026 22:53:11] 127.0.0.1 "POST /api/import HTTP/1.1" 200 -
+[01/Nov/2026 22:53:11] 127.0.0.1 "POST /api/ocr HTTP/1.1" 200 -
+[01/Nov/2026 22:53:11] 127.0.0.1 "POST /api/import HTTP/1.1" 200 -
+[01/Nov/2026 22:53:12] 127.0.0.1 "POST /api/ocr HTTP/1.1" 200 -
+[01/Nov/2026 22:53:12] 127.0.0.1 "POST /api/import HTTP/1.1" 200 -
+[01/Nov/2026 22:53:12] 127.0.0.1 "POST /api/ocr HTTP/1.1" 200 -
+[01/Nov/2026 22:53:12] 127.0.0.1 "POST /api/import HTTP/1.1" 200 -
+[01/Nov/2026 22:53:12] 127.0.0.1 "POST /api/ocr HTTP/1.1" 200 -
+[01/Nov/2026 22:53:12] 127.0.0.1 "POST /api/capture HTTP/1.1" 403 -
+[01/Nov/2026 22:53:12] 127.0.0.1 "GET /api/devices HTTP/1.1" 200 -
+[01/Nov/2026 22:53:13] 127.0.0.1 "GET /api/devices HTTP/1.1" 200 -
+[01/Nov/2026 22:53:13] 127.0.0.1 "POST /api/capture HTTP/1.1" 200 -
+[01/Nov/2026 22:53:13] 127.0.0.1 "GET /api/captures/captura-20261102T015313-027597.png HTTP/1.1" 200 -
+[01/Nov/2026 22:53:13] 127.0.0.1 "POST /api/capture HTTP/1.1" 503 -
+[01/Nov/2026 22:53:13] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[01/Nov/2026 22:53:13] 127.0.0.1 "GET / HTTP/1.1" 200 -
+[01/Nov/2026 22:53:13] 127.0.0.1 "POST /api/import HTTP/1.1" 200 -
+[01/Nov/2026 22:53:13] 127.0.0.1 "GET /api/captures/captura-20261102T015313-d45bb0.png HTTP/1.1" 200 -
+[01/Nov/2026 22:53:13] 127.0.0.1 "GET /api/captures HTTP/1.1" 200 -
+[01/Nov/2026 22:53:13] 127.0.0.1 "POST /api/plan HTTP/1.1" 400 -
+[01/Nov/2026 22:53:13] 127.0.0.1 "POST /api/plan HTTP/1.1" 400 -
+[01/Nov/2026 22:53:13] 127.0.0.1 "POST /api/plan HTTP/1.1" 400 -
+[01/Nov/2026 22:53:13] 127.0.0.1 "POST /api/plan HTTP/1.1" 400 -
+[01/Nov/2026 22:53:13] 127.0.0.1 "POST /api/ocr HTTP/1.1" 200 -
+[01/Nov/2026 22:53:13] 127.0.0.1 "POST /api/ocr HTTP/1.1" 200 -
+[01/Nov/2026 22:53:13] 127.0.0.1 "POST /api/ocr HTTP/1.1" 503 -
+[01/Nov/2026 22:53:13] 127.0.0.1 "POST /api/plan HTTP/1.1" 200 -
+[01/Nov/2026 22:53:13] 127.0.0.1 "GET /api/captures/..%2fREADME.md HTTP/1.1" 404 -
+[01/Nov/2026 22:53:13] 127.0.0.1 "POST /api/import HTTP/1.1" 400 -
+[01/Nov/2026 22:53:13] 127.0.0.1 "POST /api/ocr HTTP/1.1" 400 -
+[01/Nov/2026 22:53:13] 127.0.0.1 "POST /api/capture HTTP/1.1" 400 -
 
 test_collection_image_real_ocr (test_ocr_e2e.RealOCRTest.test_collection_image_real_ocr) ... ok
 test_missions_image_real_ocr (test_ocr_e2e.RealOCRTest.test_missions_image_real_ocr) ... ok
 test_resources_image_real_ocr (test_ocr_e2e.RealOCRTest.test_resources_image_real_ocr) ... ok
 test_unknown_image_real_ocr (test_ocr_e2e.RealOCRTest.test_unknown_image_real_ocr) ... ok
 test_zero_glyph_is_never_guessed_as_nonzero (test_ocr_e2e.RealOCRTest.test_zero_glyph_is_never_guessed_as_nonzero) ... ok
+test_completed_ocr_mission_is_only_a_review_suggestion (test_planner.PlannerTest.test_completed_ocr_mission_is_only_a_review_suggestion) ... ok
+test_free_pack_recommendation_is_based_on_registered_data (test_planner.PlannerTest.test_free_pack_recommendation_is_based_on_registered_data) ... ok
+test_inputs_are_never_modified (test_planner.PlannerTest.test_inputs_are_never_modified) ... ok
+test_invalid_resource_values_rejected (test_planner.PlannerTest.test_invalid_resource_values_rejected) ... ok
+test_invalid_shapes_rejected (test_planner.PlannerTest.test_invalid_shapes_rejected) ... ok
+test_mission_and_task_progress_have_distinct_sources (test_planner.PlannerTest.test_mission_and_task_progress_have_distinct_sources) ... ok
+test_ocr_balance_never_replaces_registered_balance (test_planner.PlannerTest.test_ocr_balance_never_replaces_registered_balance) ... ok
+test_priority_order_and_no_reward_amount_promised (test_planner.PlannerTest.test_priority_order_and_no_reward_amount_promised) ... ok
+test_reserve_and_zero_automatic_spend (test_planner.PlannerTest.test_reserve_and_zero_automatic_spend) ... ok
+test_reserve_larger_than_balance (test_planner.PlannerTest.test_reserve_larger_than_balance) ... ok
+test_unknown_balance_is_not_zero_or_spendable (test_planner.PlannerTest.test_unknown_balance_is_not_zero_or_spendable) ... ok
+test_unknown_screen_is_not_a_completed_mission (test_planner.PlannerTest.test_unknown_screen_is_not_a_completed_mission) ... ok
 test_collection_ambiguity_not_merged (test_recognition.RecognitionTest.test_collection_ambiguity_not_merged) ... ok
 test_collection_requires_explicit_quantity (test_recognition.RecognitionTest.test_collection_requires_explicit_quantity) ... ok
 test_conflicting_duplicates_abstain (test_recognition.RecognitionTest.test_conflicting_duplicates_abstain) ... ok
@@ -54,12 +71,14 @@ test_device_error_gracefully (test_server.ServerTest.test_device_error_gracefull
 test_fake_adb_capture (test_server.ServerTest.test_fake_adb_capture) ... ok
 test_health_and_static_page (test_server.ServerTest.test_health_and_static_page) ... ok
 test_import_and_get_capture (test_server.ServerTest.test_import_and_get_capture) ... ok
+test_invalid_planner_inputs_rejected (test_server.ServerTest.test_invalid_planner_inputs_rejected) ... ok
 test_ocr_recognition_contract (test_server.ServerTest.test_ocr_recognition_contract) ... ok
 test_ocr_unavailable_and_failure (test_server.ServerTest.test_ocr_unavailable_and_failure) ... ok
+test_planner_http_uses_manual_record_and_unconfirmed_text (test_server.ServerTest.test_planner_http_uses_manual_record_and_unconfirmed_text) ... ok
 test_rejects_bad_input_and_traversal (test_server.ServerTest.test_rejects_bad_input_and_traversal) ... ok
 
 ----------------------------------------------------------------------
-Ran 28 tests in 2.679s
+Ran 42 tests in 4.292s
 
 OK
 
@@ -71,11 +90,18 @@ V3 UI OK: candidates escaped; reserve, resources, inventory and saved backup sta
 
 
 
+COMMAND: ['C:\\Users\\ofici\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe', 'tests/ui_observer_node.js']
+EXIT CODE: 0
+Observer OK: automatic capture/OCR/plan; no stale capture, no saved-state mutation, visibility and busy guards
+
+
+
 COMMAND: ['git', 'diff', '--check']
 EXIT CODE: 0
 
+warning: in the working copy of '.github/workflows/tests.yml', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'app.py', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/progress.md', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/test-results.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/test_server.py', LF will be replaced by CRLF the next time Git touches it
 

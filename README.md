@@ -1,6 +1,14 @@
-# Pocket AutoPilot — V3 preview
+# Pocket AutoPilot — V4 preview
 
 Assistente local para Pokémon TCG Pocket: planejamento de coleção e recursos, reserva de ampulhetas e reconhecimento revisável de telas por OCR. Continuação da V2 original; não executa ações na conta.
+
+## Novo nesta continuação
+
+O monitor, quando ativado, captura uma nova imagem, executa OCR e gera sugestões automaticamente a cada 15 segundos enquanto a aba Leitor visual estiver visível. Sem dispositivo ADB autorizado, a importação PNG e o planejamento manual continuam disponíveis.
+
+O painel **Sugestões automáticas** organiza missões reconhecidas e tarefas registradas. Ele separa registros manuais de leituras não confirmadas, preserva a reserva e mantém gasto automático igual a zero. O botão **Atualizar sugestões** recalcula o plano sem executar OCR novamente. Ao mudar recursos ou tarefas, o plano anterior é marcado como desatualizado.
+
+Este é um marco técnico local em preview. Os testes de V3/V4 no jogo permanecem pendentes; não é um bot de coleta, navegação ou batalhas. A autonomia implementada é de observação e planejamento. Veja `docs/assistant-plan.md`.
 
 ## Estado desta entrega
 

@@ -26,6 +26,7 @@ jobs:
           node-version: '24'
       - run: python -m unittest discover -s tests -v
       - run: node tests/ui_smoke_node.js
+      - run: node tests/ui_observer_node.js
 
   real-ocr-synthetic-images:
     runs-on: ubuntu-latest

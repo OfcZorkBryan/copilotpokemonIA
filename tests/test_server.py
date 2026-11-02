@@ -127,6 +127,21 @@ class ServerTest(unittest.TestCase):
         self.assertEqual(result['recognition']['screen'], 'resources')
         self.assertEqual(result['recognition']['candidates']['resources'], {'hourglasses': 120})
         self.assertTrue(result['recognition']['requires_review'])
+        self.assertEqual(result['plan']['budget']['max_automatic_spend'], 0)
+
+    def test_planner_http_uses_manual_record_and_unconfirmed_text(self):
+        state = {'resources': {'hourglasses': 120, 'reserve': 24, 'freePacks': 1}}
+        code, result = self.request('POST', '/api/plan', {
+            'state': state, 'ocr_text': 'Recursos\nAmpulhetas de pacote: 999'})
+        self.assertEqual(code, 200)
+        self.assertEqual(result['plan']['budget']['hourglasses'], 120)
+        self.assertEqual(result['plan']['budget']['above_reserve'], 96)
+        self.assertEqual(result['plan']['automated_game_actions'], [])
+
+    def test_invalid_planner_inputs_rejected(self):
+        for payload in [{'state': []}, {'state': {'resources': {'hourglasses': True}}},
+                        {'state': {}, 'ocr_text': []}, {'state': {}, 'ocr_text': 'x' * 12001}]:
+            self.assertEqual(self.request('POST', '/api/plan', payload)[0], 400)
 
     def test_ocr_unavailable_and_failure(self):
         from unittest.mock import patch

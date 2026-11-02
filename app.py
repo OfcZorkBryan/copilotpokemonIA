@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pocket AutoPilot V3 preview: painel local e reconhecimento OCR revisável.
+"""Pocket AutoPilot V4 preview: observação e planejamento local revisável.
 
 Serve a interface e permite consultar dispositivos, capturar e analisar imagens
 locais. Não envia toques nem interage com servidores de Pokémon TCG Pocket.
@@ -24,6 +24,7 @@ import webbrowser
 
 from adb_bridge import devices, screenshot
 from recognition import recognize
+from planner import build_plan
 
 ROOT = Path(__file__).resolve().parent
 CAPTURES = ROOT / 'captures'
@@ -122,7 +123,7 @@ def ocr_image(file: str) -> dict:
 
 
 class Handler(BaseHTTPRequestHandler):
-    server_version = 'PocketAutoPilot/3.0-preview'
+    server_version = 'PocketAutoPilot/4.0-preview'
 
     def log_message(self, fmt, *args):
         # Não registrar dados de telas ou conteúdo de OCR nos logs.
@@ -154,7 +155,7 @@ class Handler(BaseHTTPRequestHandler):
             if url in ('/', '/index.html'):
                 return self.send_bytes(ROOT / 'index.html', 'text/html; charset=utf-8')
             if url == '/api/health':
-                return self.send_json({'ok': True, 'version': '3.0-preview', 'mode': 'read-only',
+                return self.send_json({'ok': True, 'version': '4.0-preview', 'mode': 'read-only',
                                        'ocr_available': shutil.which('tesseract') is not None})
             if url == '/api/devices':
                 try:
@@ -200,9 +201,15 @@ class Handler(BaseHTTPRequestHandler):
                 file = req.get('file')
                 if not isinstance(file, str):
                     raise ValueError('Informe um nome de captura válido')
+                state = req.get('state', {})
+                build_plan(state)  # Reject malformed local records before running OCR.
                 result = ocr_image(file)
                 result['recognition'] = recognize(result.get('text', ''))
+                result['plan'] = build_plan(state, result['recognition'])
                 return self.send_json(result)
+            if self.path == '/api/plan':
+                observation = recognize(req.get('ocr_text', ''))
+                return self.send_json({'plan': build_plan(req.get('state', {}), observation)})
             return self.send_json({'error': 'Rota desconhecida'}, 404)
         except (ValueError, json.JSONDecodeError) as e:
             return self.send_json({'error': str(e)}, 400)
@@ -213,7 +220,7 @@ class Handler(BaseHTTPRequestHandler):
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description='Servidor local do Pocket AutoPilot V3 preview')
+    parser = argparse.ArgumentParser(description='Servidor local do Pocket AutoPilot V4 preview')
     parser.add_argument('--port', type=int, default=8765, help='Porta local (padrão 8765)')
     parser.add_argument('--open', action='store_true', help='Abrir o navegador')
     args = parser.parse_args()
@@ -221,7 +228,7 @@ def main() -> int:
         parser.error('Porta deve estar entre 1 e 65535')
     with ThreadingHTTPServer(('127.0.0.1', args.port), Handler) as server:
         url = f'http://127.0.0.1:{args.port}'
-        print(f'Pocket AutoPilot V3 preview: {url}\nSomente leitura do Android; Ctrl+C para encerrar.')
+        print(f'Pocket AutoPilot V4 preview: {url}\nSomente leitura do Android; Ctrl+C para encerrar.')
         if args.open:
             webbrowser.open(url)
         try:
