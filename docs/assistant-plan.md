@@ -25,3 +25,9 @@ O monitor autorizado captura uma nova imagem, executa OCR e organiza sugestões 
 ## Limites
 
 Nenhuma automação de farming, compras, partidas, cadastro, autenticação ou bypass de proteções. A coleta de recursos dentro do jogo permanece manual ou por recursos oficiais permitidos. Identificação e planejamento podem ser automáticos; recomendações não equivalem a ações executadas.
+
+## Marco C — coleção e referências competitivas
+
+Após o marco V4 passar nos testes locais e GitHub (run41374785751), ajustar o ranking de decks para priorizar menos cópias faltantes, menos dependências promocionais e menor custo histórico de troca, nessa ordem. Estatísticas competitivas servem somente como desempate e referência de arquétipo; não provam a taxa de vitória da lista herdada. Não alterar inventário ou listas da V2.
+
+Fontes primárias consultadas em 2026-11-01: páginas individuais Limitless C1 Standard para Umbreon/Mega Sableye ex, Umbreon/Hydreigon e Mega Manectric ex/Heliolisk. A tabela geral e as páginas individuais apresentaram números diferentes; usar somente as páginas individuais, com contagens e URLs explícitas. Snapshot estático, sem alegação de atualização contínua ou vitória garantida. Testes Node antes da alteração verificam prioridades e ausência de uso dos percentuais não verificados da V2.

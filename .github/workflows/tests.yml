@@ -27,6 +27,7 @@ jobs:
       - run: python -m unittest discover -s tests -v
       - run: node tests/ui_smoke_node.js
       - run: node tests/ui_observer_node.js
+      - run: node tests/ui_decks_node.js
 
   real-ocr-synthetic-images:
     runs-on: ubuntu-latest

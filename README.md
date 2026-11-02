@@ -1,8 +1,10 @@
-# Pocket AutoPilot — V4 preview
+# Pocket AutoPilot — assistente V5 preview
 
 Assistente local para Pokémon TCG Pocket: planejamento de coleção e recursos, reserva de ampulhetas e reconhecimento revisável de telas por OCR. Continuação da V2 original; não executa ações na conta.
 
 ## Novo nesta continuação
+
+O ranking de decks prioriza a coleção registrada e o custo histórico, com referências de arquétipos consultadas no Limitless em 2026-11-01. Percentuais e tiers antigos da V2 deixaram de ser apresentados como dados confirmados. Listas, custos e chances herdados continuam identificados como históricos. Veja `docs/deck-references.md`.
 
 O monitor, quando ativado, captura uma nova imagem, executa OCR e gera sugestões automaticamente a cada 15 segundos enquanto a aba Leitor visual estiver visível. Sem dispositivo ADB autorizado, a importação PNG e o planejamento manual continuam disponíveis.
 
@@ -16,8 +18,9 @@ Este é um marco técnico local em preview. Os testes de V3/V4 no jogo permanece
 - V3: identifica cabeçalhos de coleção, missões e recursos em português/inglês e apresenta quantidades explícitas como candidatos para revisão.
 - Saldos, reserva, inventário e backups não são atualizados automaticamente pela leitura.
 - Textos ambíguos ou desconhecidos permanecem sem interpretação; nomes/variantes de cartas não são vinculados ao inventário.
-- 28 testes Python e smoke JavaScript executados neste marco, incluindo cinco testes com Tesseract real sobre PNGs sintéticos. Veja `docs/ocr-validation.md`; `docs/test-results.md` preserva os resultados da primeira entrega.
-- **Ainda sem validação com capturas reais do jogo ou Android. Não é a versão final do projeto. V4 não iniciada.**
+- 49 testes Python e três scripts de verificação JavaScript passaram, incluindo cinco testes com Tesseract real sobre PNGs sintéticos. Veja `docs/release-status.md`; os relatórios anteriores preservam resultados históricos.
+- Quatro ciclos automáticos de captura/OCR/planejamento foram verificados na tela inicial de um Android real em emulador. A tela foi corretamente rejeitada como desconhecida, sem alterar os dados registrados.
+- **Ainda sem validação das telas reais de coleção, missões e recursos do jogo. Não é a versão final do bot. A coleta no jogo não foi implementada.**
 
 ## Executar e verificar
 
@@ -29,6 +32,8 @@ Para verificar sem Android ou OCR instalado, na pasta do projeto:
 ```text
 py -3 -m unittest discover -s tests -v
 node tests/ui_smoke_node.js
+node tests/ui_observer_node.js
+node tests/ui_decks_node.js
 ```
 
 Node é necessário apenas para o teste JavaScript. Os testes usam transcrições OCR sintéticas e ADB simulado; não representam testes no jogo. O teste HTTP do reconhecimento substitui apenas a resposta OCR.
@@ -38,6 +43,8 @@ Para os cinco testes opcionais de OCR real, instale Tesseract com modelos `por` 
 Antes de migrar, exporte seu backup JSON pela V2. Mantenha a mesma origem do navegador para preservar seus dados; `file://` e `http://127.0.0.1:8765` têm armazenamentos distintos. O projeto mantém a chave `pocket-autopilot-v1`. Guarde o ZIP original e seus backups fora da pasta `captures`, que mantém somente as 30 imagens mais recentes.
 
 As listas e estatísticas de decks abaixo são dados históricos herdados da V2, sem revalidação nesta entrega. Não devem ser tratadas como meta atual.
+
+Para verificar o ambiente, execute `python diagnostics.py`. A saída distingue captura, OCR e validação no jogo. Código de saída 2 indica dependência pendente; saída 0 confirma somente dependências para observação, sem aprovar o jogo. A mesma informação aparece no leitor visual por `/api/readiness`.
 
 ## Documentação original da V2
 

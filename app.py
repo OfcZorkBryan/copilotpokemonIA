@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pocket AutoPilot V4 preview: observação e planejamento local revisável.
+"""Pocket AutoPilot V5 preview: observação, planejamento e referências de decks.
 
 Serve a interface e permite consultar dispositivos, capturar e analisar imagens
 locais. Não envia toques nem interage com servidores de Pokémon TCG Pocket.
@@ -25,6 +25,7 @@ import webbrowser
 from adb_bridge import devices, screenshot
 from recognition import recognize
 from planner import build_plan
+from diagnostics import runtime_status
 
 ROOT = Path(__file__).resolve().parent
 CAPTURES = ROOT / 'captures'
@@ -123,7 +124,7 @@ def ocr_image(file: str) -> dict:
 
 
 class Handler(BaseHTTPRequestHandler):
-    server_version = 'PocketAutoPilot/4.0-preview'
+    server_version = 'PocketAutoPilot/5.0-preview'
 
     def log_message(self, fmt, *args):
         # Não registrar dados de telas ou conteúdo de OCR nos logs.
@@ -155,13 +156,15 @@ class Handler(BaseHTTPRequestHandler):
             if url in ('/', '/index.html'):
                 return self.send_bytes(ROOT / 'index.html', 'text/html; charset=utf-8')
             if url == '/api/health':
-                return self.send_json({'ok': True, 'version': '4.0-preview', 'mode': 'read-only',
+                return self.send_json({'ok': True, 'version': '5.0-preview', 'mode': 'read-only',
                                        'ocr_available': shutil.which('tesseract') is not None})
             if url == '/api/devices':
                 try:
                     return self.send_json({'devices': devices(), 'error': None})
                 except (RuntimeError, OSError) as e:
                     return self.send_json({'devices': [], 'error': str(e)})
+            if url == '/api/readiness':
+                return self.send_json(runtime_status())
             if url == '/api/captures':
                 return self.send_json({'captures': list_captures()})
             if url.startswith('/api/captures/'):
@@ -220,7 +223,7 @@ class Handler(BaseHTTPRequestHandler):
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description='Servidor local do Pocket AutoPilot V4 preview')
+    parser = argparse.ArgumentParser(description='Servidor local do Pocket AutoPilot V5 preview')
     parser.add_argument('--port', type=int, default=8765, help='Porta local (padrão 8765)')
     parser.add_argument('--open', action='store_true', help='Abrir o navegador')
     args = parser.parse_args()
@@ -228,7 +231,7 @@ def main() -> int:
         parser.error('Porta deve estar entre 1 e 65535')
     with ThreadingHTTPServer(('127.0.0.1', args.port), Handler) as server:
         url = f'http://127.0.0.1:{args.port}'
-        print(f'Pocket AutoPilot V4 preview: {url}\nSomente leitura do Android; Ctrl+C para encerrar.')
+        print(f'Pocket AutoPilot V5 preview: {url}\nSomente leitura do Android; Ctrl+C para encerrar.')
         if args.open:
             webbrowser.open(url)
         try:

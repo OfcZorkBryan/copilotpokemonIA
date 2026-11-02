@@ -143,6 +143,15 @@ class ServerTest(unittest.TestCase):
                         {'state': {}, 'ocr_text': []}, {'state': {}, 'ocr_text': 'x' * 12001}]:
             self.assertEqual(self.request('POST', '/api/plan', payload)[0], 400)
 
+    def test_readiness_endpoint_preserves_pending_game_validation(self):
+        from unittest.mock import patch
+        with patch.object(app, 'runtime_status', return_value={
+                'mode': 'read-only', 'live_analysis_ready': False, 'game_validation': 'pending'}):
+            code, result = self.request('GET', '/api/readiness')
+        self.assertEqual(code, 200)
+        self.assertFalse(result['live_analysis_ready'])
+        self.assertEqual(result['game_validation'], 'pending')
+
     def test_ocr_unavailable_and_failure(self):
         from unittest.mock import patch
         with patch.object(app, 'ocr_image', return_value={

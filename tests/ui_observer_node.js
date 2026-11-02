@@ -86,6 +86,20 @@ async function tests(){
   assert.strictEqual(vm.runInContext('bridge.capture',importing.ctx),null);
   await vm.runInContext('analyzeImage()',importing.ctx);
   assert.deepStrictEqual(importCalls,['/api/import'],'Import failure must not analyze the old image');
+
+  const readiness=context(),readinessCalls=[];
+  readiness.ctx.bridgeApi=async path=>{
+    readinessCalls.push(path);
+    if(path==='/api/health')return {ok:true};
+    if(path==='/api/captures')return {captures:[]};
+    if(path==='/api/readiness')return {devices:[],capture_ready:false,ocr_ready:true,
+      live_analysis_ready:false,game_validation:'pending',blockers:['Nenhum Android autorizado']};
+    throw Error('Unexpected readiness endpoint '+path);
+  };
+  await vm.runInContext('refreshBridge()',readiness.ctx);
+  assert.strictEqual(vm.runInContext('bridge.online',readiness.ctx),true);
+  assert.strictEqual(vm.runInContext('bridge.readiness.live_analysis_ready',readiness.ctx),false);
+  assert(readiness.elements.main.innerHTML.includes('Validação no jogo: pendente'));
   console.log('Observer OK: automatic capture/OCR/plan; no stale capture, no saved-state mutation, visibility and busy guards');
 }
 tests().catch(e=>{console.error(e);process.exitCode=1});
