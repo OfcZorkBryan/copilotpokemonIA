@@ -103,7 +103,8 @@ def ocr_image(file: str) -> dict:
         return {'available': False, 'text': '', 'reason': 'OCR opcional indisponível: instale Tesseract OCR no Windows ou leia a imagem manualmente.'}
     with OCR_LOCK:
         try:
-            installed = subprocess.run([program, '--list-langs'], capture_output=True, text=True, timeout=10)
+            installed = subprocess.run([program, '--list-langs'], capture_output=True,
+                                       text=True, encoding='utf-8', errors='replace', timeout=10)
             langs = installed.stdout.splitlines() + installed.stderr.splitlines()
             has_por = any(l.strip() == 'por' for l in langs)
             has_eng = any(l.strip() == 'eng' for l in langs)
@@ -111,7 +112,7 @@ def ocr_image(file: str) -> dict:
             if lang is None:
                 return {'available': False, 'text': '', 'reason': 'Tesseract está instalado, mas não há dados de idiomas por/eng.'}
             result = subprocess.run([program, str(path), 'stdout', '-l', lang],
-                                    capture_output=True, text=True, timeout=25)
+                                    capture_output=True, text=True, encoding='utf-8', errors='replace', timeout=25)
         except subprocess.TimeoutExpired:
             raise RuntimeError('OCR excedeu o tempo limite de 25 segundos.')
         if result.returncode:

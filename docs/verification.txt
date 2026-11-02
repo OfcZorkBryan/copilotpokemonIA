@@ -1,24 +1,39 @@
 COMMAND: ['C:\\Users\\ofici\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe', '-m', 'unittest', 'discover', '-s', 'tests', '-v']
 EXIT CODE: 0
-[01/Nov/2026 22:12:41] 127.0.0.1 "POST /api/capture HTTP/1.1" 403 -
-[01/Nov/2026 22:12:41] 127.0.0.1 "GET /api/devices HTTP/1.1" 200 -
-[01/Nov/2026 22:12:41] 127.0.0.1 "GET /api/devices HTTP/1.1" 200 -
-[01/Nov/2026 22:12:41] 127.0.0.1 "POST /api/capture HTTP/1.1" 200 -
-[01/Nov/2026 22:12:41] 127.0.0.1 "GET /api/captures/captura-20261102T011241-920f13.png HTTP/1.1" 200 -
-[01/Nov/2026 22:12:41] 127.0.0.1 "POST /api/capture HTTP/1.1" 503 -
-[01/Nov/2026 22:12:41] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
-[01/Nov/2026 22:12:41] 127.0.0.1 "GET / HTTP/1.1" 200 -
-[01/Nov/2026 22:12:41] 127.0.0.1 "POST /api/import HTTP/1.1" 200 -
-[01/Nov/2026 22:12:41] 127.0.0.1 "GET /api/captures/captura-20261102T011241-bf59d8.png HTTP/1.1" 200 -
-[01/Nov/2026 22:12:41] 127.0.0.1 "GET /api/captures HTTP/1.1" 200 -
-[01/Nov/2026 22:12:41] 127.0.0.1 "POST /api/ocr HTTP/1.1" 200 -
-[01/Nov/2026 22:12:41] 127.0.0.1 "POST /api/ocr HTTP/1.1" 200 -
-[01/Nov/2026 22:12:41] 127.0.0.1 "POST /api/ocr HTTP/1.1" 503 -
-[01/Nov/2026 22:12:41] 127.0.0.1 "GET /api/captures/..%2fREADME.md HTTP/1.1" 404 -
-[01/Nov/2026 22:12:41] 127.0.0.1 "POST /api/import HTTP/1.1" 400 -
-[01/Nov/2026 22:12:41] 127.0.0.1 "POST /api/ocr HTTP/1.1" 400 -
-[01/Nov/2026 22:12:41] 127.0.0.1 "POST /api/capture HTTP/1.1" 400 -
+[01/Nov/2026 22:22:25] 127.0.0.1 "POST /api/import HTTP/1.1" 200 -
+[01/Nov/2026 22:22:25] 127.0.0.1 "POST /api/ocr HTTP/1.1" 200 -
+[01/Nov/2026 22:22:25] 127.0.0.1 "POST /api/import HTTP/1.1" 200 -
+[01/Nov/2026 22:22:25] 127.0.0.1 "POST /api/ocr HTTP/1.1" 200 -
+[01/Nov/2026 22:22:25] 127.0.0.1 "POST /api/import HTTP/1.1" 200 -
+[01/Nov/2026 22:22:26] 127.0.0.1 "POST /api/ocr HTTP/1.1" 200 -
+[01/Nov/2026 22:22:26] 127.0.0.1 "POST /api/import HTTP/1.1" 200 -
+[01/Nov/2026 22:22:26] 127.0.0.1 "POST /api/ocr HTTP/1.1" 200 -
+[01/Nov/2026 22:22:26] 127.0.0.1 "POST /api/import HTTP/1.1" 200 -
+[01/Nov/2026 22:22:26] 127.0.0.1 "POST /api/ocr HTTP/1.1" 200 -
+[01/Nov/2026 22:22:26] 127.0.0.1 "POST /api/capture HTTP/1.1" 403 -
+[01/Nov/2026 22:22:26] 127.0.0.1 "GET /api/devices HTTP/1.1" 200 -
+[01/Nov/2026 22:22:27] 127.0.0.1 "GET /api/devices HTTP/1.1" 200 -
+[01/Nov/2026 22:22:27] 127.0.0.1 "POST /api/capture HTTP/1.1" 200 -
+[01/Nov/2026 22:22:27] 127.0.0.1 "GET /api/captures/captura-20261102T012227-a31b8a.png HTTP/1.1" 200 -
+[01/Nov/2026 22:22:27] 127.0.0.1 "POST /api/capture HTTP/1.1" 503 -
+[01/Nov/2026 22:22:27] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[01/Nov/2026 22:22:27] 127.0.0.1 "GET / HTTP/1.1" 200 -
+[01/Nov/2026 22:22:27] 127.0.0.1 "POST /api/import HTTP/1.1" 200 -
+[01/Nov/2026 22:22:27] 127.0.0.1 "GET /api/captures/captura-20261102T012227-23d6db.png HTTP/1.1" 200 -
+[01/Nov/2026 22:22:27] 127.0.0.1 "GET /api/captures HTTP/1.1" 200 -
+[01/Nov/2026 22:22:27] 127.0.0.1 "POST /api/ocr HTTP/1.1" 200 -
+[01/Nov/2026 22:22:27] 127.0.0.1 "POST /api/ocr HTTP/1.1" 200 -
+[01/Nov/2026 22:22:27] 127.0.0.1 "POST /api/ocr HTTP/1.1" 503 -
+[01/Nov/2026 22:22:27] 127.0.0.1 "GET /api/captures/..%2fREADME.md HTTP/1.1" 404 -
+[01/Nov/2026 22:22:27] 127.0.0.1 "POST /api/import HTTP/1.1" 400 -
+[01/Nov/2026 22:22:27] 127.0.0.1 "POST /api/ocr HTTP/1.1" 400 -
+[01/Nov/2026 22:22:27] 127.0.0.1 "POST /api/capture HTTP/1.1" 400 -
 
+test_collection_image_real_ocr (test_ocr_e2e.RealOCRTest.test_collection_image_real_ocr) ... ok
+test_missions_image_real_ocr (test_ocr_e2e.RealOCRTest.test_missions_image_real_ocr) ... ok
+test_resources_image_real_ocr (test_ocr_e2e.RealOCRTest.test_resources_image_real_ocr) ... ok
+test_unknown_image_real_ocr (test_ocr_e2e.RealOCRTest.test_unknown_image_real_ocr) ... ok
+test_zero_glyph_is_never_guessed_as_nonzero (test_ocr_e2e.RealOCRTest.test_zero_glyph_is_never_guessed_as_nonzero) ... ok
 test_collection_ambiguity_not_merged (test_recognition.RecognitionTest.test_collection_ambiguity_not_merged) ... ok
 test_collection_requires_explicit_quantity (test_recognition.RecognitionTest.test_collection_requires_explicit_quantity) ... ok
 test_conflicting_duplicates_abstain (test_recognition.RecognitionTest.test_conflicting_duplicates_abstain) ... ok
@@ -44,7 +59,7 @@ test_ocr_unavailable_and_failure (test_server.ServerTest.test_ocr_unavailable_an
 test_rejects_bad_input_and_traversal (test_server.ServerTest.test_rejects_bad_input_and_traversal) ... ok
 
 ----------------------------------------------------------------------
-Ran 23 tests in 0.893s
+Ran 28 tests in 2.679s
 
 OK
 
@@ -61,7 +76,6 @@ EXIT CODE: 0
 
 warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'app.py', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'tests/test_server.py', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'tests/ui_smoke_node.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/progress.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/test-results.md', LF will be replaced by CRLF the next time Git touches it
 

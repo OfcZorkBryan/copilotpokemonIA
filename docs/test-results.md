@@ -2,6 +2,8 @@
 
 Data local: 1º de novembro de 2026, America/Sao_Paulo.
 
+Atualização posterior nesta mesma data: publicado em OfcZorkBryan/copilotpokemonIA; 28 testes Python aprovados, incluindo cinco com OCR real sobre imagens sintéticas. Veja `ocr-validation.md` e o log atualizado `verification.txt`. Os resultados abaixo registram a primeira entrega de 23 testes; indisponibilidades do ambiente nessa primeira inspeção foram parcialmente resolvidas depois.
+
 ## Origem e preservação
 
 ZIP recebido: pocket-autopilot-v2 (1).zip, 25929 bytes.

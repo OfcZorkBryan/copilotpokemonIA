@@ -8,7 +8,7 @@ Assistente local para Pokémon TCG Pocket: planejamento de coleção e recursos,
 - V3: identifica cabeçalhos de coleção, missões e recursos em português/inglês e apresenta quantidades explícitas como candidatos para revisão.
 - Saldos, reserva, inventário e backups não são atualizados automaticamente pela leitura.
 - Textos ambíguos ou desconhecidos permanecem sem interpretação; nomes/variantes de cartas não são vinculados ao inventário.
-- 23 testes Python e smoke JavaScript executados neste marco. Veja `docs/test-results.md`.
+- 28 testes Python e smoke JavaScript executados neste marco, incluindo cinco testes com Tesseract real sobre PNGs sintéticos. Veja `docs/ocr-validation.md`; `docs/test-results.md` preserva os resultados da primeira entrega.
 - **Ainda sem validação com capturas reais do jogo ou Android. Não é a versão final do projeto. V4 não iniciada.**
 
 ## Executar e verificar
@@ -24,6 +24,8 @@ node tests/ui_smoke_node.js
 ```
 
 Node é necessário apenas para o teste JavaScript. Os testes usam transcrições OCR sintéticas e ADB simulado; não representam testes no jogo. O teste HTTP do reconhecimento substitui apenas a resposta OCR.
+
+Para os cinco testes opcionais de OCR real, instale Tesseract com modelos `por` e `eng` e Pillow; no PowerShell, use `$env:POCKET_TEST_REAL_OCR='1'` antes do comando Python. Tesseract precisa estar no PATH. Esses testes geram PNGs sintéticos e percorrem HTTP, importação, OCR e parser sem substituir o OCR. Sem a opção, são explicitamente ignorados. O fluxo GitHub Actions testa Windows/Linux, Python 3.10/3.12 e OCR real com imagens sintéticas em Linux.
 
 Antes de migrar, exporte seu backup JSON pela V2. Mantenha a mesma origem do navegador para preservar seus dados; `file://` e `http://127.0.0.1:8765` têm armazenamentos distintos. O projeto mantém a chave `pocket-autopilot-v1`. Guarde o ZIP original e seus backups fora da pasta `captures`, que mantém somente as 30 imagens mais recentes.
 

@@ -1,0 +1,18 @@
+EXPECTED FAILURE CHECK: real OCR requested, Tesseract absent from PATH.
+Observed exit: 5; expected nonzero. Gate: PASS.
+
+
+setUpClass (test_ocr_e2e.RealOCRTest) ... ERROR
+
+======================================================================
+ERROR: setUpClass (test_ocr_e2e.RealOCRTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ofici\Documents\Codex\2026-11-01\referenced-chatgpt-conversation-this-is-an\outputs\pocket-autopilot\tests\test_ocr_e2e.py", line 26, in setUpClass
+    raise RuntimeError('Real OCR was requested but Tesseract or Pillow is unavailable')
+RuntimeError: Real OCR was requested but Tesseract or Pillow is unavailable
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.005s
+
+FAILED (errors=1)
