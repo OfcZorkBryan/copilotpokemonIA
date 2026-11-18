@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="title desc">
+<title id="title">Pocket AutoPilot — banner original</title><desc id="desc">Planejamento e leitura revisável de telas</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#10172B"/><stop offset=".54" stop-color="#292346"/><stop offset="1" stop-color="#122A3A"/></linearGradient>
+ <radialGradient id="aura"><stop stop-color="#BFA7FF" stop-opacity=".38"/><stop offset="1" stop-color="#BFA7FF" stop-opacity="0"/></radialGradient>
+ <linearGradient id="line" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9FE8F0"/><stop offset=".55" stop-color="#C8B7FF"/><stop offset="1" stop-color="#F3B8D4"/></linearGradient>
+ <filter id="blur"><feGaussianBlur stdDeviation="24"/></filter>
+</defs>
+<rect width="1200" height="340" rx="26" fill="url(#bg)"/>
+<circle cx="1015" cy="158" r="180" fill="url(#aura)" filter="url(#blur)"/>
+<path d="M700 278C820 227 845 96 1028 78c64-6 112 18 151 45" fill="none" stroke="url(#line)" stroke-opacity=".32" stroke-width="2"/>
+<path d="M760 303c109-71 147-144 275-161 53-7 103 3 145 29" fill="none" stroke="#A9DDE9" stroke-opacity=".2" stroke-width="1.5"/>
+<circle cx="1014" cy="165" r="83" fill="#D7D2FF" fill-opacity=".08" stroke="#D7D2FF" stroke-opacity=".52" stroke-width="2"/>
+<path d="M1044 91a83 83 0 1 0 52 136a73 73 0 0 1-52-136Z" fill="#E8DFFF" fill-opacity=".86"/>
+<path d="M1086 75l7 18 18 7-18 7-7 18-7-18-18-7 18-7z" fill="#A8EDF2"/>
+<path d="M929 235l5 13 13 5-13 5-5 13-5-13-13-5 13-5z" fill="#F2BED9"/>
+<circle cx="885" cy="104" r="3" fill="#E8DFFF"/><circle cx="1138" cy="204" r="3" fill="#A8EDF2"/>
+<circle cx="1099" cy="280" r="2.5" fill="#F2BED9"/><circle cx="838" cy="191" r="2.5" fill="#A8EDF2"/>
+<path d="M82 73h38" stroke="#A8EDF2" stroke-width="3" stroke-linecap="round"/>
+<text x="82" y="111" fill="#C9C1EB" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" letter-spacing="3">FERRAMENTA LOCAL • PYTHON + WEB</text>
+<text x="80" y="189" fill="#F4F2FF" font-family="Segoe UI,Arial,sans-serif" font-size="56" font-weight="750">Pocket AutoPilot</text>
+<text x="82" y="234" fill="#C7D9E8" font-family="Segoe UI,Arial,sans-serif" font-size="20">Planejamento e leitura revisável de telas</text>
+<rect x="82" y="271" width="210" height="3" rx="1.5" fill="url(#line)" opacity=".9"/>
+<text x="82" y="307" fill="#9AAEC2" font-family="Segoe UI,Arial,sans-serif" font-size="13" letter-spacing="2">OF CZORKBRYAN  •  PROJETOS FEITOS COM CURIOSIDADE</text>
+</svg>
