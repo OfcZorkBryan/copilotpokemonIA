@@ -1,5 +1,7 @@
 # Pocket AutoPilot — Pokémon TCG Pocket
 
+![Banner anime original em tons suaves](assets/anime-banner.svg)
+
 > Ferramenta local de [OfcZorkBryan](https://github.com/OfcZorkBryan) para planejar a coleção e revisar leituras de tela.
 
 **Tecnologias:** Python · HTML/CSS · JavaScript · Tesseract OCR opcional  
