@@ -1,6 +1,9 @@
-# Pocket AutoPilot — assistente V5 preview
+# Pocket AutoPilot — Pokémon TCG Pocket
 
-Assistente local para Pokémon TCG Pocket: planejamento de coleção e recursos, reserva de ampulhetas e reconhecimento revisável de telas por OCR. Continuação da V2 original; não executa ações na conta.
+> Ferramenta local de [OfcZorkBryan](https://github.com/OfcZorkBryan) para planejar a coleção e revisar leituras de tela.
+
+**Tecnologias:** Python · HTML/CSS · JavaScript · Tesseract OCR opcional  
+**Status:** V5 preview · somente observação e planejamento; não executa ações na conta do jogo.
 
 ## Novo nesta continuação
 
